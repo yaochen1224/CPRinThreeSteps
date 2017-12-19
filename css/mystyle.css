@@ -52,6 +52,10 @@ header h1 {
    margin-top: 20px;
  }
 
+ #note h4 {
+   color: #B71C1C;
+ }
+
 #moreContent {
   background: white;
   padding: 80px 0;
@@ -100,7 +104,10 @@ header h1 {
 
 #rule {
   position: absolute;
-  left: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   top: -10px;
   z-index: 300;
 }
@@ -123,6 +130,7 @@ header h1 {
 #controller a {
   margin-left: 30px;
 }
+
 
 footer {
   border-top: solid 1px #eee;
