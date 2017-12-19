@@ -10,6 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="js/pumpGame.js" type="text/javascript"></script>
+  <script src="js/scroll.js" type="text/javascript"></script>
 </head>
 <body>
   <header class="text-center">
@@ -20,13 +21,13 @@
       <section class="col-sm-4 step">
         <h2>1. CALL</h2>
         <img src="img/quick1.gif">
-        <p>Check the victim for <b>unresponsiveness</b>. If the person is not responsive and not breathing or not breathing normally. Call 911 and return to the victim. If possible bring the phone next to the person and place on speaker mode. In most locations the emergency dispatcher can assist you with CPR instructions.</p>
+        <p>Check the victim for <a href="#unresponsiveness" title="To Top"><b>unresponsiveness</b></a>. If the person is not responsive and not breathing or not breathing normally. Call 911 and return to the victim. If possible bring the phone next to the person and place on speaker mode. In most locations the emergency dispatcher can assist you with CPR instructions.</p>
       </section>
       <section class="col-sm-4 step">
         <h2>2. PUMP</h2>
         <img src="img/handposition.gif">
         <img src="img/pumpani.gif">
-        <p>If the victim is still not breathing normally, coughing or moving, begin chest compressions.  <b>Push</b> down in the center of the chest 2-2.4 inches 30 times. Pump hard and fast at the rate of <b>100-120/minute</b>, faster than once per second.</p>
+        <p>If the victim is still not breathing normally, coughing or moving, begin chest compressions.  <a href="#push" title="To Top"><b>Push</b></a> down in the center of the chest 2-2.4 inches 30 times. Pump hard and fast at the rate of <a href="#pump" title="To Top"><b>100-120/minute</b></a>, faster than once per second.</p>
       </section>
       <section class="col-sm-4 step">
         <h2>3. BLOW</h2>
@@ -39,9 +40,11 @@
       </section>
     </div>
     <div class="more">
-      <button type="button" class="btn btn-default btn-circle btn-xl">
-        <i class="fa fa-angle-down" aria-hidden="true"></i>
-      </button>
+      <a href="#moreContent" title="To Top">
+        <button type="button" class="btn btn-default btn-circle btn-xl">
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </button>
+      </a>
     </div>
 
     <div id="moreContent" class="row text-center">
@@ -67,20 +70,21 @@
           <p>To practice, you can use the following "Pump With Music Tempo" game to get the sense of the frequency!</p>
         </div>
       </div>
-
-        <div id="myCanvas" class="col-sm-12">
-          <script type="text/javascript">myGameArea.intro_screen();</script>
+      <div id="myCanvas" class="col-sm-12">
+        <script type="text/javascript">myGameArea.intro_screen();</script>
+        <div id = "rule" class="collapse">
+          <img src="img/Rule.png">
         </div>
-        <div id="controller" class="col-sm-12">
-          <h2 id="feedback"> </h2>
-          <button type="button" onclick="startGame()" class = "btn btn-default">START</button>
-          <button type="button" onclick="myGameArea.stop(); myMusic.stop();" class = "btn btn-default">STOP</button>
-        </div>
+      </div>
+      <div id="controller" class="col-sm-12">
+        <h3 id="feedback">Hang in there!</h3>
+        <button type="button" onclick="startGame()" class = "btn btn-default btn-circle btn-lg"><i class="fa fa-play" aria-hidden="true"></i></button>
+        <button type="button" onclick="stopGame()" class = "btn btn-default btn-circle btn-lg"><i class="fa fa-stop" aria-hidden="true"></i></button>
+        <a href="#rule" class="btn btn-default" data-toggle="collapse">Click to see the rules</a>
+      </div>
     </div>
     <footer class="text-center">
       <p>Website Created by <b>Yao Chen</b></P>
     </footer>
   </div>
-
-
 </body>

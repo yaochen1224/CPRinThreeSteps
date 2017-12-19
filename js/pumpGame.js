@@ -13,7 +13,15 @@ var comboCount = 0;
 var startTime;
 var elapsedTime;
 
+function stopGame() {
+  myGameArea.stop();
+  myMusic.stop();
+  myObstacles = [];
+  gameStarted = false;
+}
+
 function startGame() {
+  if (gameStarted) return;
   gameStarted = true;
   myGameArea.clear();
   // drawInactive(myGameArea.context);
@@ -38,7 +46,7 @@ var myGameArea = {
         this.canvas.style="border:1px solid #eee;"
         document.getElementById("myCanvas").appendChild(this.canvas);
         this.context.font = "30px Helvetica";
-        this.context.fillStyle = "#E57373";
+        this.context.fillStyle = "#B71C1C";
         this.context.textAlign = "center";
         this.context.fillText("Pump With Music Tempo", this.canvas.width/2, this.canvas.height/2);
         this.context.font = "20px Arial";
@@ -145,7 +153,7 @@ function component(width, height, color, x, y, type) {
 
 function updateGameArea() {
     var x, y;
-    if (myMusic.sound.currentTime >= 86.517551 || comboCount ==60) {
+    if (myMusic.sound.currentTime >= 86.517551) {
        myGameArea.stop();
        myMusic.stop();
     }
